@@ -1,0 +1,202 @@
+/* Om Gurave Namah
+Sri Ganeshaaya Namah */
+
+.todoList {
+    
+    width:700px;
+    margin: 70px auto;
+    box-shadow: 0 2px 0 rgb(133, 104, 250);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+.completed{
+    margin-top:50px;
+}
+#complete{
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    background-color: #8063FA;
+    border-bottom: solid 2px #D4CAFF;
+}
+  
+  header {
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: #8063FA;
+    border-bottom: solid 2px #D4CAFF;
+  }
+
+  header h1 {
+    flex-grow: 1;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
+
+  .inputData{
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 40px 190px 45px 150px 60px 50px 100px;
+    background-color:  rgba(87, 51, 231, 0.493);
+  }
+
+  .inputItems{
+    
+    font-family: Myriad;
+    padding-top:10px;
+    color:  #FFF;
+    font-size: 1em;
+    margin: 1px auto;
+  }
+  #text{
+      padding-left:3px;
+  }
+  
+
+  .btnList {
+    width: 100px;
+    border: none;
+    font-family: Myriad;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: rgb(90, 83, 83);
+    background-color: #DCDCDC;
+    display: block;
+    padding: 10px 10px;
+    cursor: pointer;
+    outline: none;    
+  }
+
+  #btnDelete{
+      text-align: center;
+      padding-right:25px;
+  }
+
+  #btnDelete:hover{
+    background: rgb(165, 62, 62);
+    color: white;
+  }
+
+  #btnComplete{
+    text-align: center;
+    padding-right:25px;
+}
+
+  #btnComplete:hover{
+    background: rgb(19, 124, 5);
+    color: white;
+  }
+
+
+  .btnList:hover{
+      background: rgb(158, 114, 32);
+      color:white;
+  }
+
+  input[type=date]{
+      background-color: rgb(131, 127, 127);
+      margin-bottom: 5px;
+      border-radius: 5px;
+      padding-bottom:1px;
+      padding-top:1px;
+      
+  }
+
+  select{
+    background-color: rgb(161, 159, 159);
+  }
+
+  .inputItemsDate{
+      padding-top:10px;
+  }
+
+  input[type=text] {
+    border-width: 0 0 1px 0;
+    padding-top:5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-left:5px;
+    border-radius: 5px;
+    background-color: #5B45B9;
+    border-style: none;
+    text-shadow: none;
+    color: #C7BCF8;
+    outline: none;
+  }
+  
+  input[type=text]::-webkit-input-placeholder{
+    color: #C7BCF8;
+    letter-spacing: 2px;
+  }
+  
+  input[type=text]:focus{
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  
+  #dateSpanError,
+  #textBoxSpanError{
+      color:red;
+  }
+  #dateSpanError{
+    font-family: Myriad;
+    font-size: 1em;
+    margin: 1px auto;
+  }
+
+  table {
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    grid-template-columns: 
+    minmax(150px, 190px)
+    minmax(150px, 190px)
+    minmax(150px, 100px)
+    minmax(100px, 100px)
+    minmax(100px, 120px)
+  }
+ 
+
+    thead,
+    tbody,
+    tr {
+    display: contents;
+    }
+
+    th,
+    td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+    th {
+    position: sticky;
+    top: 0;
+    background: #6c7ae0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: white;
+    }
+
+    th:last-child {
+    border: 0;
+    }
+
+    td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #808080;
+    }
+
+    tr:nth-child(even) td {
+    background: #f8f6ff;
+    }

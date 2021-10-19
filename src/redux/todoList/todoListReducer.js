@@ -1,4 +1,4 @@
-import {ADD_TODOLIST,EDIT_TODOLIST,DELETE_TODOLIST,COMPLETED_TODOLIST} from './todoListTypes'
+import {ADD_TODOLIST,SORT_TODOLIST,EDIT_TODOLIST,DELETE_TODOLIST,COMPLETED_TODOLIST} from './todoListTypes'
 import addNotification from 'react-push-notification';
 
 const initialState = {
@@ -22,6 +22,16 @@ const sendNotification = (list,msg) =>{
         theme: 'green',
         native: true // when using native, your OS will handle theming.
     });  
+}
+
+const sortByTask = (a, b) =>{
+    if(a.listName > b.listName){
+        return 1;
+    } else if(b.listName > a.listName){
+        return -1;
+    }else {
+        return 0;
+    }
 }
 
 const todoListReducer = (state = initialState, action) =>{
@@ -60,6 +70,24 @@ const todoListReducer = (state = initialState, action) =>{
                 todoList:state.todoList.filter(arr => arr.id!==action.payload)
             }
             sendNotification(filteredCompletedList[0],'TASK COMPLETED!') 
+            return obj
+
+        case SORT_TODOLIST:  
+            var obj ={}
+            if(action.payload==='task'){
+                var temp = state.todoList.sort(sortByTask)
+                
+                obj = {
+                    ...state,
+                    todoList:[temp]
+                }
+            }
+            else if(action.payload==='date'){
+
+            }
+            else if(action.payload==='priority'){
+
+            }      
             return obj
         default: return state
     }

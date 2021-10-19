@@ -1,2 +1,2 @@
 
-export {addToDoList,editToDoList, deleteToDoList, completedList} from './todoList/todoListActions'
+export {addToDoList,editToDoList, sortOnClick, deleteToDoList, completedList} from './todoList/todoListActions'
